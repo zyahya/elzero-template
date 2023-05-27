@@ -445,7 +445,7 @@ a {
 .features .box .img-holder::after {
 	content: "";
 	position: absolute;
-	bottom: 0;
+	bottom: -1px;
 	right: 0;
 	border-style: solid;
 	border-width: 0px 0px 200px 500px;
@@ -453,7 +453,7 @@ a {
 	transition: var(--main-transition);
 }
 .features .box:hover .img-holder::after {
-	border-width: 0px 352px 170px 500px;;
+	border-width: 0px 360px 170px 500px;
 }
 .features .box .img-holder img {
 	max-width: 100%;
@@ -536,6 +536,81 @@ a {
 	color: white;
 }
 /* End Features */
+/* Start Testimonials */
+.testimonials {
+	padding-top: var(--section-padding);
+	padding-bottom: var(--section-padding);
+	position: relative;
+	background-color: var(--section-backgroung);
+}
+.testimonials .container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 40px;
+}
+.testimonials .box {
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+	border-radius: 6px;
+	position: relative;
+}
+.testimonials .box img {
+	position: absolute;
+	right: -10px;
+	top: -50px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 10px solid var(--section-backgroung);
+}
+.testimonials .box h3 {
+	margin: 0 0 10px;
+	color: var(--main-color);
+}
+.testimonials .box .title {
+	color: #777;
+	margin-bottom: 10px;
+	display: block;
+}
+.testimonials .box .rate .filled {
+	color: #ffc107;
+}
+.testimonials .box p {
+	line-height: 1.7;
+	color: #777;
+	margin-top: 10px;
+}
+/* End Testimonials */
+/* Start Team */
+.team {
+	padding-top: var(--section-padding);
+	padding-bottom: var(--section-padding);
+	position: relative;
+}
+.team .container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 30px;
+}
+.team .box {
+	position: relative;
+}
+.team .box::before {
+	content: "";
+	background-color: #f3f3f3;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: calc(100% - 60px);
+	border-radius: 10px;
+	z-index: -2;
+}
+.team .box img {
+	max-width: 100%;
+}
+/* End Team */
 /*start animation*/
 @keyframes up-and-down {
 	0%, 100% {
